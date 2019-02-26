@@ -35,7 +35,7 @@
     "watch:tsc": "tsc -w",
     "watch:sass": "sass --watch sass:css",
     "watch": "npm-run-all -p watch:*",
-    "server:node": "nodemon index.js",
+    "server:node": "nodemon server/index.js",
     "server:modd": "modd",
     "server": "npm-run-all -p server:*",
     "start": "npm-run-all -p watch server"

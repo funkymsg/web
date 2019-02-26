@@ -16,7 +16,10 @@ function html(ctx:Koa.ParameterizedContext){
     ctx.body = buzz(ctx.params)
 }
 
+app.use(koaStatic('js'))
+app.use(koaStatic('css'))
 app.use(koaStatic('html'))
+app.use(koaStatic('img'))
 app.use(router.routes())
 app.use(router.allowedMethods())
 app.listen(3000);
