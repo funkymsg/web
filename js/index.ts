@@ -10,12 +10,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     (document.getElementById('get-link') as HTMLInputElement).addEventListener('click', async () => {
         function getVal(id: string) {
-            const el = document.getElementById(id) as HTMLInputElement
-            return encodeURIComponent(el.value)
+            return (document.getElementById(id) as HTMLInputElement).value
         }
 
         const info: info = {
-            img: encodeURIComponent((document.querySelector('input[name="img"]:checked') as HTMLInputElement).value),
+            img: (document.querySelector('input[name="img"]:checked') as HTMLInputElement).value,
             title: getVal('title'),
             description: getVal('description'),
             msg: getVal('msg')
@@ -29,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 async function getShortUrl(info: info): Promise<{ shortLink: string }> {
-    const longUrl = `${location.href}${info.img}/${info.title}/${info.description}/${info.msg}/`
+    const longUrl = `${location.href}${encodeURIComponent(info.img)}/${encodeURIComponent(info.title)}/${encodeURIComponent(info.description)}/${encodeURIComponent(info.msg)}/`
 
     const res = await fetch('https://firebasedynamiclinks.googleapis.com/v1/shortLinks?key=AIzaSyB3McXFfPlMWJAvTYhGs_oslhcnzZcJsXQ', {
         method: 'POST'
@@ -41,10 +40,10 @@ async function getShortUrl(info: info): Promise<{ shortLink: string }> {
                     "socialTitle": info.title,
                     "socialDescription": info.description,
                     "socialImageLink": `${location.href}${info.img}`
-                },
-                "suffix": {
-                    "option": "SHORT"
                 }
+            },
+            "suffix": {
+                "option": "SHORT"
             }
         })
         , headers: {

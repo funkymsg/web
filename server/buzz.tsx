@@ -1,7 +1,7 @@
 import * as elements from 'typed-html';
 
 export function buzz(info: { msg: string, title: string, description: string, img: string }) {
-    const text = info.msg || ''
+    const msg = info.msg || ''
     const title = info.title || ''
     const description = info.description || ''
     const img = info.img || ''
@@ -10,9 +10,9 @@ export function buzz(info: { msg: string, title: string, description: string, im
     <link rel="icon" href="/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="${title}" />
-    <meta property="og:description" content="${description}" />
-    <meta property="og:image" content="https://funkymsg.com/${img}">                
+    <meta property="og:title" content="${decodeURIComponent(title)}" />
+    <meta property="og:description" content="${decodeURIComponent(description)}" />
+    <meta property="og:image" content="https://funkymsg.com/${decodeURIComponent(img)}">                
     `
 
     return '<!DOCTYPE html>' + <html>
@@ -22,7 +22,7 @@ export function buzz(info: { msg: string, title: string, description: string, im
             <link rel='stylesheet' href='/index.css' />
         </head>
         <body>
-            <div class='message' dir='auto'><p>{text}</p></div>
+            <div class='message' dir='auto'><p>{msg}</p></div>
         </body>
     </html>
 }
