@@ -17,6 +17,7 @@ export function buzz(info: { msg: string, title: string, description: string, im
     return <html>
         <head>
             {meta}
+            <title>{title}</title>
             <link rel='stylesheet' href='/index.css' />
         </head>
         <body>
