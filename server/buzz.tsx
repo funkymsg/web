@@ -15,7 +15,7 @@ export function buzz(info: { msg: string, title: string, description: string, im
     <meta property="og:image" content="https://funkymsg.com/${img}">                
     `
 
-    return <html>
+    return '<!DOCTYPE html>' + <html>
         <head>
             {meta}
             <title>{title}</title>
