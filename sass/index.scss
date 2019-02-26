@@ -1,31 +1,31 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
-
-*{
+* {
     box-sizing: border-box;
 }
 
-html, body{
+html,
+body {
     margin: 0;
     width: 100%;
     height: 100%;
 }
 
-body{
+body {
     font-size: 24px;
     line-height: 3em;
     font-family: 'Roboto', sans-serif;
     color: #333;
 }
 
-#content{
+#content {
     padding: 1em;
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
-input[type='text']{
-    background-color: white;    
+input[type='text'] {
+    background-color: white;
     display: block;
     width: 100%;
     padding: .5em;
@@ -33,21 +33,21 @@ input[type='text']{
     border: 1px solid #B9B8D3;
 }
 
-#imgs{
+#imgs {
     display: flex;
 }
 
-#imgs > input[type='radio']{
+#imgs>input[type='radio'] {
     display: none;
 }
 
-#imgs > input[type='radio']:checked + label{
+#imgs>input[type='radio']:checked+label {
     border-color: gold;
     opacity: 1;
 }
 
-#imgs > label {
-    &:hover{
+#imgs>label {
+    &:hover {
         opacity: .9;
     }
     cursor: pointer;
@@ -60,13 +60,12 @@ input[type='text']{
     border: solid 2px white;
 }
 
-img{
+img {
     max-width: 150%;
     max-height: 150%;
 }
 
-
-input[type='button']{
+input[type='button'] {
     margin: .5em 0;
     padding: .5em;
     font-size: 1em;
@@ -75,11 +74,21 @@ input[type='button']{
     color: white;
     cursor: pointer;
     opacity: .9;
-    &:hover{
+    &:hover {
         opacity: 1;
     }
 }
 
-#get-link{
+#get-link {
     margin-top: 2em;
+}
+
+.message {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
 }

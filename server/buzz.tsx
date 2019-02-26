@@ -1,6 +1,6 @@
 import * as elements from 'typed-html';
 
-export function buzz(info:{text:string, title:string, description:string, img:string}) {
+export function buzz(info: { text: string, title: string, description: string, img: string }) {
     const text = info.text || ''
     const title = info.title || 'WOW'
     const description = info.description || 'You wont'
@@ -14,9 +14,10 @@ export function buzz(info:{text:string, title:string, description:string, img:st
     return <html>
         <head>
             {meta}
+            <link rel='stylesheet' href='/index.css' />
         </head>
         <body>
-            <h1>{text}</h1>
+            <div class='message' dir='auto'><p>{text}</p></div>
         </body>
     </html>
 }
