@@ -1,16 +1,16 @@
 import * as elements from 'typed-html';
 
-export function buzz(info: { text: string, title: string, description: string, img: string }) {
-    const text = info.text || ''
-    const title = info.title || 'WOW'
-    const description = info.description || 'You wont'
+export function buzz(info: { msg: string, title: string, description: string, img: string }) {
+    const text = info.msg || ''
+    const title = info.title || ''
+    const description = info.description || ''
     const img = info.img || ''
     const meta = `
     <meta charset="UTF-8">
-    <link rel="icon" href="favicon.png">
+    <link rel="icon" href="/favicon.png">
     <meta property="og:title" content="${title}" />
     <meta property="og:description" content="${description}" />
-    <meta property="og:image" itemprop="image" content="${img}">                
+    <meta property="og:image" itemprop="image" content="/${img}">                
     `
 
     return <html>
