@@ -1,0 +1,43 @@
+{
+  "name": "buzzzzzzzz.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/buzzzzzzzz-com/buzzzzzzzz.com.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/buzzzzzzzz-com/buzzzzzzzz.com/issues"
+  },
+  "homepage": "https://github.com/buzzzzzzzz-com/buzzzzzzzz.com#readme",
+  "devDependencies": {
+    "@types/express": "^4.16.1",
+    "@types/koa": "^2.0.48",
+    "@types/koa-router": "^7.0.40",
+    "@types/koa-static": "^4.0.1",
+    "@types/node": "^11.9.5",
+    "nodemon": "^1.18.10",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.17.2",
+    "typescript": "^3.3.3333"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "koa": "^2.7.0",
+    "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0",
+    "typed-html": "^1.0.0"
+  },
+  "scripts": {
+    "watch:tsc": "tsc -w",
+    "watch:sass": "sass --watch sass:css",
+    "watch": "npm-run-all -p watch:*",
+    "server:node": "nodemon index.js",
+    "server:modd": "modd",
+    "server": "npm-run-all -p server:*",
+    "start": "npm-run-all -p watch server"
+  }
+}
