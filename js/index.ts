@@ -1,16 +1,24 @@
+import ClipboardJS from 'clipboard'
+
 document.addEventListener('DOMContentLoaded', () => {
-    (document.getElementById('get-link') as HTMLInputElement).addEventListener('click', ()=>{
+    const clip = new ClipboardJS('#get-link', {
+        text: function () {
+            return getLongUrl()
+        }
+    });
+
+    (document.getElementById('get-link') as HTMLInputElement).addEventListener('click', () => {
         console.log(getLongUrl())
     })
 })
 
-function getVal(id:string){
-    const el = document.getElementById(id) as HTMLInputElement
-    return encodeURIComponent(el.value)
-}
-
 function getLongUrl() {
-    const text= getVal('text')
+    function getVal(id: string) {
+        const el = document.getElementById(id) as HTMLInputElement
+        return encodeURIComponent(el.value)
+    }
+
+    const text = getVal('text')
     const title = getVal('title')
     const description = getVal('description')
     const img = encodeURIComponent((document.querySelector('input[name="img"]:checked') as HTMLInputElement).value);
