@@ -1,14 +1,13 @@
-import ClipboardJS from 'clipboard'
-
 document.addEventListener('DOMContentLoaded', () => {
-    const clip = new ClipboardJS('#get-link', {
-        text: function () {
-            return getLongUrl()
-        }
-    });
 
-    (document.getElementById('get-link') as HTMLInputElement).addEventListener('click', () => {
-        console.log(getLongUrl())
+    (document.getElementById('get-link') as HTMLInputElement).addEventListener('click', async () => {
+        console.log('getting long url')
+        const longUrl = getLongUrl()
+        console.log('getting short url')
+        const shortUrl = (await getShortUrl(longUrl)).shortLink 
+        console.log(shortUrl)
+        ;
+        (document.getElementById('short-url') as HTMLInputElement).value = shortUrl
     })
 })
 
@@ -26,16 +25,17 @@ function getLongUrl() {
     return `${location.href}/${text}/${title}/${description}/${img}`
 }
 
-async function shortUrl(url: string) {
+async function getShortUrl(longUrl: string):Promise<{shortLink:string}> {
     const res = await fetch('https://firebasedynamiclinks.googleapis.com/v1/shortLinks?key=AIzaSyB3McXFfPlMWJAvTYhGs_oslhcnzZcJsXQ', {
         method: 'POST'
         , body: JSON.stringify({
-            longDynamicLink: 'https://kutiel.page.link/?link=' + url
+            longDynamicLink: 'https://kutiel.page.link/?link=' + longUrl
         })
         , headers: {
             "Content-Type": "application/json",
         },
 
     })
-    return await res.json();
+    const json = await res.json();
+    return json
 }

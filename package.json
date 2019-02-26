@@ -14,8 +14,7 @@
   },
   "homepage": "https://github.com/buzzzzzzzz-com/buzzzzzzzz.com#readme",
   "devDependencies": {
-    "@types/clipboard": "^2.0.1",
-    "@types/express": "^4.16.1",
+    "@types/clipboard-js": "^0.3.2",
     "@types/koa": "^2.0.48",
     "@types/koa-router": "^7.0.40",
     "@types/koa-static": "^4.0.1",
@@ -28,8 +27,7 @@
     "webpack-cli": "^3.2.3"
   },
   "dependencies": {
-    "clipboard": "^2.0.4",
-    "express": "^4.16.4",
+    "clipboard-js": "^0.3.6",
     "koa": "^2.7.0",
     "koa-router": "^7.4.0",
     "koa-static": "^5.0.0",
@@ -38,6 +36,7 @@
   "scripts": {
     "watch:tsc": "tsc -w",
     "watch:sass": "sass --watch sass:css",
+    "watch:webpack": "webpack",
     "watch": "npm-run-all -p watch:*",
     "server:node": "nodemon server/index.js",
     "server:modd": "modd",

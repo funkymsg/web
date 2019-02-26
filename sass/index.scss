@@ -73,4 +73,13 @@ input[type='button']{
     background-color: #1F5673;
     border: 0;
     color: white;
+    cursor: pointer;
+    opacity: .9;
+    &:hover{
+        opacity: 1;
+    }
+}
+
+#get-link{
+    margin-top: 2em;
 }
