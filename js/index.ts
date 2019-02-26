@@ -1,13 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     (document.getElementById('get-link') as HTMLInputElement).addEventListener('click', async () => {
+        const out = document.getElementById('short-url') as HTMLInputElement
+        out.value = 'generating link...'
         console.log('getting long url')
         const longUrl = getLongUrl()
         console.log(longUrl, 'getting short url')
         const shortUrl = (await getShortUrl(longUrl)).shortLink
         console.log(shortUrl)
-            ;
-        (document.getElementById('short-url') as HTMLInputElement).value = shortUrl
+        out.value = shortUrl
+        console.log(shortUrl)
     })
 })
 
