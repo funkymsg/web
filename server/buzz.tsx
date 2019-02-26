@@ -8,6 +8,7 @@ export function buzz(info: { msg: string, title: string, description: string, im
     const meta = `
     <meta charset="UTF-8">
     <link rel="icon" href="/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="${title}" />
     <meta property="og:description" content="${description}" />
     <meta property="og:image" itemprop="image" content="/${img}">                

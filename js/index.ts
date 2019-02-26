@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const shortUrl = (await getShortUrl(longUrl)).shortLink
         console.log(shortUrl)
         out.value = shortUrl
-        console.log(shortUrl)
     })
 })
 
