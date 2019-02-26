@@ -1,36 +1,51 @@
+
+type info = {
+    img: string
+    title: string
+    description: string
+    msg: string
+}
+
 document.addEventListener('DOMContentLoaded', () => {
 
     (document.getElementById('get-link') as HTMLInputElement).addEventListener('click', async () => {
+        function getVal(id: string) {
+            const el = document.getElementById(id) as HTMLInputElement
+            return encodeURIComponent(el.value)
+        }
+
+        const info: info = {
+            img: encodeURIComponent((document.querySelector('input[name="img"]:checked') as HTMLInputElement).value),
+            title: getVal('title'),
+            description: getVal('description'),
+            msg: getVal('msg')
+        }
+
+
         const out = document.getElementById('short-url') as HTMLInputElement
         out.value = 'generating link...'
-        console.log('getting long url')
-        const longUrl = getLongUrl()
-        console.log(longUrl, 'getting short url')
-        const shortUrl = (await getShortUrl(longUrl)).shortLink
-        console.log(shortUrl)
-        out.value = shortUrl
+        out.value = (await getShortUrl(info)).shortLink
     })
 })
 
-function getLongUrl() {
-    function getVal(id: string) {
-        const el = document.getElementById(id) as HTMLInputElement
-        return encodeURIComponent(el.value)
-    }
+async function getShortUrl(info: info): Promise<{ shortLink: string }> {
+    const longUrl = `${location.href}${info.img}/${info.title}/${info.description}/${info.msg}/`
 
-    const img = encodeURIComponent((document.querySelector('input[name="img"]:checked') as HTMLInputElement).value);
-    const title = getVal('title')
-    const description = getVal('description')
-    const msg = getVal('msg')
-
-    return `${location.href}${img}/${title}/${description}/${msg}/`
-}
-
-async function getShortUrl(longUrl: string): Promise<{ shortLink: string }> {
     const res = await fetch('https://firebasedynamiclinks.googleapis.com/v1/shortLinks?key=AIzaSyB3McXFfPlMWJAvTYhGs_oslhcnzZcJsXQ', {
         method: 'POST'
         , body: JSON.stringify({
-            longDynamicLink: 'https://kutiel.page.link/?link=' + longUrl
+            "dynamicLinkInfo": {
+                "domainUriPrefix": 'https://kutiel.page.link',
+                "link": longUrl,
+                "socialMetaTagInfo": {
+                    "socialTitle": info.title,
+                    "socialDescription": info.description,
+                    "socialImageLink": `${location.href}${info.img}`
+                },
+                "suffix": {
+                    "option": "SHORT"
+                }
+            }
         })
         , headers: {
             "Content-Type": "application/json",

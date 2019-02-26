@@ -9,9 +9,10 @@ export function buzz(info: { msg: string, title: string, description: string, im
     <meta charset="UTF-8">
     <link rel="icon" href="/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta property="og:type" content="article" />
     <meta property="og:title" content="${title}" />
     <meta property="og:description" content="${description}" />
-    <meta property="og:image" itemprop="image" content="/${img}">                
+    <meta property="og:image" content="https://funkymsg.com/${img}">                
     `
 
     return <html>
