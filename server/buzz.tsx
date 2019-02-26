@@ -6,6 +6,7 @@ export function buzz(info: { text: string, title: string, description: string, i
     const description = info.description || 'You wont'
     const img = info.img || ''
     const meta = `
+    <meta charset="UTF-8">
     <link rel="icon" href="favicon.png">
     <meta property="og:title" content="${title}" />
     <meta property="og:description" content="${description}" />

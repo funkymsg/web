@@ -3,10 +3,10 @@ document.addEventListener('DOMContentLoaded', () => {
     (document.getElementById('get-link') as HTMLInputElement).addEventListener('click', async () => {
         console.log('getting long url')
         const longUrl = getLongUrl()
-        console.log('getting short url')
-        const shortUrl = (await getShortUrl(longUrl)).shortLink 
+        console.log(longUrl, 'getting short url')
+        const shortUrl = (await getShortUrl(longUrl)).shortLink
         console.log(shortUrl)
-        ;
+            ;
         (document.getElementById('short-url') as HTMLInputElement).value = shortUrl
     })
 })
@@ -22,10 +22,10 @@ function getLongUrl() {
     const description = getVal('description')
     const img = encodeURIComponent((document.querySelector('input[name="img"]:checked') as HTMLInputElement).value);
 
-    return `${location.href}/${text}/${title}/${description}/${img}`
+    return `${location.href}${text}/${title}/${description}/${img}`
 }
 
-async function getShortUrl(longUrl: string):Promise<{shortLink:string}> {
+async function getShortUrl(longUrl: string): Promise<{ shortLink: string }> {
     const res = await fetch('https://firebasedynamiclinks.googleapis.com/v1/shortLinks?key=AIzaSyB3McXFfPlMWJAvTYhGs_oslhcnzZcJsXQ', {
         method: 'POST'
         , body: JSON.stringify({
