@@ -19,9 +19,8 @@ body {
 
 #content {
     padding: 1em;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    width: 90%;
+    margin: 0 auto;
 }
 
 input[type='text'] {
@@ -35,6 +34,7 @@ input[type='text'] {
 
 #imgs {
     display: flex;
+    flex-wrap: wrap;
 }
 
 #imgs>input[type='radio'] {
@@ -51,18 +51,18 @@ input[type='text'] {
         opacity: .9;
     }
     cursor: pointer;
-    opacity: .8;
+    opacity: .7;
     display: block;
     width: 90px;
     height: 90px;
     overflow: hidden;
-    margin: 2px;
-    border: solid 2px white;
+    // margin: 2px;
+    border: solid 3px white;
 }
 
 img {
-    max-width: 150%;
-    max-height: 150%;
+    // max-width: 200%;
+    max-height: 90px;
 }
 
 input[type='button'] {
