@@ -42,6 +42,10 @@
         "server:node": "nodemon server/index.js",
         "server:modd": "modd",
         "server": "npm-run-all -p server:*",
-        "start": "npm-run-all -p watch server"
+        "start": "npm-run-all -p watch server",
+        "docker:build": "docker build -t gkutiel/funkymsg.com .",
+        "docker:run": "docker run -p 4000:8080 -d gkutiel/funkymsg.com",
+        "docker:rm": "docker rm $(docker ps -a -q)",
+        "docker:rmi": "docker rmi $(docker images gkutiel/funkymsg.com"
     }
 }
