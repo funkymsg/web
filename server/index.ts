@@ -6,10 +6,11 @@ import { buzz } from './buzz'
 const app = new Koa();
 const router = new Router()
 
-router.get('/:msg/:title/:description/:img', html)
+router.get('/:img/:title/:description/:msg/', html)
 
 function html(ctx: Koa.ParameterizedContext) {
-    ctx.type = 'text/html'
+    ctx.response.type = 'html'
+    // ctx.type = 'text/html; charset=utf-8'
     ctx.body = buzz(ctx.params)
 }
 

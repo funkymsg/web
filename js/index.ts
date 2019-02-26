@@ -18,12 +18,12 @@ function getLongUrl() {
         return encodeURIComponent(el.value)
     }
 
-    const text = getVal('text')
+    const img = encodeURIComponent((document.querySelector('input[name="img"]:checked') as HTMLInputElement).value);
     const title = getVal('title')
     const description = getVal('description')
-    const img = encodeURIComponent((document.querySelector('input[name="img"]:checked') as HTMLInputElement).value);
+    const msg = getVal('msg')
 
-    return `${location.href}${text}/${title}/${description}/${img}`
+    return `${location.href}${img}/${title}/${description}/${msg}/`
 }
 
 async function getShortUrl(longUrl: string): Promise<{ shortLink: string }> {
