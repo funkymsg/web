@@ -1,0 +1,25 @@
+async function getShortUrlGoogle(info: info): Promise<{ shortLink: string }> {
+
+    const res = await fetch('https://firebasedynamiclinks.googleapis.com/v1/shortLinks?key=AIzaSyB3McXFfPlMWJAvTYhGs_oslhcnzZcJsXQ', {
+        method: 'POST'
+        , body: JSON.stringify({
+            "dynamicLinkInfo": {
+                "domainUriPrefix": 'https://kutiel.page.link',
+                "link": getLongUrl(info),
+                "socialMetaTagInfo": {
+                    "socialTitle": info.title,
+                    "socialDescription": info.description,
+                    "socialImageLink": `${location.href}${info.img}`
+                }
+            },
+            "suffix": {
+                "option": "SHORT"
+            }
+        })
+        , headers: {
+            "Content-Type": "application/json",
+        },
+
+    })
+    return await res.json();
+}

@@ -23,34 +23,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const out = document.getElementById('short-url') as HTMLInputElement
         out.value = 'generating link...'
-        out.value = (await getShortUrl(info)).shortLink
+        out.value = await getShortUrl(info)
     })
 })
 
-async function getShortUrl(info: info): Promise<{ shortLink: string }> {
-    const longUrl = `${location.href}${encodeURIComponent(info.img)}/${encodeURIComponent(info.title)}/${encodeURIComponent(info.description)}/${encodeURIComponent(info.msg)}/`
-
-    const res = await fetch('https://firebasedynamiclinks.googleapis.com/v1/shortLinks?key=AIzaSyB3McXFfPlMWJAvTYhGs_oslhcnzZcJsXQ', {
-        method: 'POST'
-        , body: JSON.stringify({
-            "dynamicLinkInfo": {
-                "domainUriPrefix": 'https://kutiel.page.link',
-                "link": longUrl,
-                "socialMetaTagInfo": {
-                    "socialTitle": info.title,
-                    "socialDescription": info.description,
-                    "socialImageLink": `${location.href}${info.img}`
-                }
-            },
-            "suffix": {
-                "option": "SHORT"
-            }
-        })
-        , headers: {
-            "Content-Type": "application/json",
-        },
-
-    })
-    const json = await res.json();
-    return json
+function getLongUrl(info: info) {
+    return `${location.href}${encodeURIComponent(info.img)}/${encodeURIComponent(info.title)}/${encodeURIComponent(info.description)}/${encodeURIComponent(info.msg)}/`
 }
+
+async function getShortUrl(info: info): Promise<string> {
+    const res = await fetch(`https://avp.io/api/v2/action/shorten?key=ae34615cd0157f29c42263d132e7ef&url=${encodeURIComponent(getLongUrl(info))}`)
+    return await res.text()
+}
+
