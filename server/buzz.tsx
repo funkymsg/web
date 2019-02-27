@@ -22,7 +22,7 @@ export function buzz(info: { msg: string, title: string, description: string, im
             <link rel='stylesheet' href='/index.css' />
         </head>
         <body>
-            <div class='message' dir='auto'><p>{msg}</p></div>
+            <div class='message' dir='auto'><div>{msg}</div></div>
         </body>
     </html>
 }
