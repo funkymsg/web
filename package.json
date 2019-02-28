@@ -33,10 +33,10 @@
     },
     "scripts": {
         "build:tsc": "tsc",
-        "build:sass": "sass sass:css",
+        "build:sass": "sass sass:s/css",
         "build": "npm-run-all build:*",
         "watch:tsc": "tsc -w",
-        "watch:sass": "sass --watch sass:css",
+        "watch:sass": "sass --watch sass:s/css",
         "watch:webpack": "webpack",
         "watch": "npm-run-all -p watch:*",
         "server:node": "nodemon server/index.js",
