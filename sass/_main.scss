@@ -1,6 +1,10 @@
 #imgs {
     display: flex;
     flex-wrap: wrap;
+    // justify-content: center;
+    img {
+        height: 90px;
+    }
 }
 
 #imgs>input[type='radio'] {
@@ -29,3 +33,10 @@
     border: solid 3px white;
 }
 
+#get-link {
+    margin-top: 2em;
+}
+
+#share[href='']{
+    display: none;
+}

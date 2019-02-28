@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const mobile = isMobile.isMobile()
+    const share = document.getElementById('share') as HTMLAnchorElement
     console.log('is mobile', mobile)
 
     function getLongUrl(info: info) {
@@ -35,9 +36,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         e.preventDefault();
 
+        share.href = ''
         const out = document.getElementById('short-url') as HTMLInputElement
         out.value = 'generating link...'
         out.value = await getShortUrl(info)
+        if(mobile){
+            share.href = `whatsapp://send?text=${out.value}`
+        }
         return false;
     })
 })
