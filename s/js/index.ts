@@ -34,6 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
             msg: getVal('msg')
         }
 
+        console.log(info)
         e.preventDefault();
 
         share.href = ''

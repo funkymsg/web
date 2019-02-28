@@ -15,6 +15,7 @@ export function buzz(info: { msg: string, title: string, description: string, im
     <meta property="og:image" content="https://funkymsg.com/${decodeURIComponent(img)}">                
     `
 
+    const fontSize = (50 + 5 * msg.length)/msg.length + 'vw'
     return '<!DOCTYPE html>' + <html>
         <head>
             {meta}
@@ -22,7 +23,7 @@ export function buzz(info: { msg: string, title: string, description: string, im
             <link rel='stylesheet' href='/css/index.css' />
         </head>
         <body>
-            <div class='message' dir='auto'><div>{msg}</div></div>
+            <div class='message' dir='auto' style={'font-size:' + fontSize}><div>{msg}</div></div>
         </body>
     </html>
 }
