@@ -1,5 +1,5 @@
 .message {
-    line-height: 1.5em;
+    // line-height: 1.5em;
     height: 100%;
     width: 100%;
     display: flex;
@@ -10,3 +10,21 @@
     padding: 1em;
 }
 
+#reply{
+    position: fixed;
+    bottom: 2em;
+    right: 2em;
+    border: 1px solid #333;
+    border-radius: 50%;
+    background-color: #333;
+    color: white;
+    height: 2em;
+    width: 2em;
+    line-height: 2em;
+    text-align: center;
+    box-shadow:  1px 2px 7px 3px #ccc;
+    opacity: .8;
+    &:hover{
+        opacity: 1;
+    }
+}
