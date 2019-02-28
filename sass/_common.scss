@@ -31,38 +31,11 @@ input[type='text'] {
     color: #555;
 }
 
-#imgs {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-#imgs>input[type='radio'] {
-    display: none;
-}
-
-#imgs>input[type='radio']:checked+label {
-    border-color: gold;
-    opacity: 1;
-}
-
-#imgs>label {
-    &:hover {
-        opacity: .9;
-    }
-    cursor: pointer;
-    opacity: .7;
-    display: block;
-    width: 90px;
-    height: 90px;
-    overflow: hidden;
-    border: solid 3px white;
-}
-
 img {
     height: 90px;
 }
 
-input[type='button'] {
+button, input[type='button'] {
     margin: .5em 0;
     padding: .5em;
     font-size: 1em;

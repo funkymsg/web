@@ -11,6 +11,18 @@
       "css": "whatsapp",
       "code": 62002,
       "src": "fontawesome"
+    },
+    {
+      "uid": "77dc6351a75ce82023a99696c9dd1ed3",
+      "css": "reply",
+      "code": 59392,
+      "src": "websymbols"
+    },
+    {
+      "uid": "815503841e980c848f55e0271deacead",
+      "css": "link",
+      "code": 59393,
+      "src": "entypo"
     }
   ]
 }
