@@ -12,7 +12,7 @@ export function buzz(info: { msg: string, title: string, description: string, im
     <meta property="og:type" content="article" />
     <meta property="og:title" content="${decodeURIComponent(title)}" />
     <meta property="og:description" content="${decodeURIComponent(description)}" />
-    <meta property="og:image" content="https://funkymsg.com/${decodeURIComponent(img)}">                
+    <meta property="og:image" content="https://funkymsg.com/img/${decodeURIComponent(img)}">                
     `
 
     const fontSize = (50 + 5 * msg.length)/msg.length + 'vw'
