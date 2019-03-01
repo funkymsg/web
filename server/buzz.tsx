@@ -24,7 +24,7 @@ export function buzz(info: { msg: string, title: string, description: string, im
         </head>
         <body>
             <div class='message' dir='auto' style={'font-size:' + fontSize}><div>{msg}</div></div>
-            <a id='reply' title='Replay' href="/app/"><i class='icon-reply'></i></a>
+            <a class='btn-circle absolute-bottom-right' title='Replay' href="/app/"><i class='icon-reply'></i></a>
         </body>
     </html>
 }
