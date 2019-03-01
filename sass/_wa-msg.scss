@@ -1,0 +1,70 @@
+.wa {
+    display: flex;
+}
+
+.wa-msg {
+    flex-grow: 1;
+    font-family: "Arimo";
+    background-color: #dcf8c6;
+    padding: 6px 9px;
+    border-radius: 7.5px;
+    box-shadow: 0 1px 0.5px rgba(0, 0, 0, 0.13);
+    border-top-right-radius: 0px;
+}
+
+.wa-tail {
+    flex-grow: 0;
+    height: 0;
+    border: 8px solid #dcf8c6;
+    border-bottom-color: white;
+    border-right-color: white;
+}
+
+.wa-preview {
+    background-color: #cfe9ba;
+    border-radius: 6px;
+    color: #262626;
+    font-size: 13.6px;
+    display: flex;
+    align-items: center;
+}
+
+.wa-img {
+    overflow: hidden;
+    height: 90px;
+    width: 90px;
+    display: flex;
+    justify-content: center;
+    border-radius: 6px 0 0 6px;
+    img {
+        max-height: 100%;
+    }
+}
+
+.wa-text {
+    padding: 6px 10px;
+}
+
+.wa-title {
+    color: black;
+}
+
+.wa-link {
+    font-size: 14px;
+    color: #039be5;
+    text-decoration: none;
+}
+
+.wa-desc {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.wa-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.wa-seen {
+    font-size: 11px;
+    color: rgba(0, 0, 0, 0.45);
+}

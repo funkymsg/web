@@ -1,153 +1,118 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>FunkyMsg.com</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta property="og:title" content="FunkyMsg.com" />
     <meta property="og:description" content="Send Funky Messages" />
     <meta property="og:image" itemprop="image" content="https://funkymsg.com/img/01.jpg">
-
+    <link rel="stylesheet" href="https://cdn.staticaly.com/gh/marvelapp/devices.css/a5448c0a/assets/devices.min.css">
     <link rel="stylesheet" href="/css/index.css">
-    <script src="/js/index.min.js"></script>
+    <title>FunkyMsg.com</title>
 </head>
 
 <body>
-    <div id='content'>
-        <form id='generator' autocomplete="off">
-            <!-- TITLE -->
-            <section>
-                <label for="title">Title</label>
-                <input required id='title' type="text" placeholder="e.g. 10 People You Won't Believe Actually Exist">
-            </section>
-
-            <!-- DESCRIPTION -->
-            <section>
-                <label for="description">Description</label>
-                <input required id='description' type="text" placeholder="e.g. Click this to see more">
-            </section>
-
-            <!-- Images -->
-            <section>
-
-                <label for="">Image</label>
-                <div id="imgs">
-                    <input required type='radio' name='img' id='01.jpg' value='01.jpg'>
-                    <label for='01.jpg'><img src='/img/01.jpg' alt=''></label>
-                    <input required type='radio' name='img' id='02.jpg' value='02.jpg'>
-                    <label for='02.jpg'><img src='/img/02.jpg' alt=''></label>
-                    <input required type='radio' name='img' id='03.jpg' value='03.jpg'>
-                    <label for='03.jpg'><img src='/img/03.jpg' alt=''></label>
-                    <input required type='radio' name='img' id='04.jpg' value='04.jpg'>
-                    <label for='04.jpg'><img src='/img/04.jpg' alt=''></label>
-                    <input required type='radio' name='img' id='05.jpg' value='05.jpg'>
-                    <label for='05.jpg'><img src='/img/05.jpg' alt=''></label>
-                    <input required type='radio' name='img' id='06.jpg' value='06.jpg'>
-                    <label for='06.jpg'><img src='/img/06.jpg' alt=''></label>
-                    <input required type='radio' name='img' id='07.jpg' value='07.jpg'>
-                    <label for='07.jpg'><img src='/img/07.jpg' alt=''></label>
-                    <input required type='radio' name='img' id='08.jpg' value='08.jpg'>
-                    <label for='08.jpg'><img src='/img/08.jpg' alt=''></label>
-                    <input required type='radio' name='img' id='09.jpg' value='09.jpg'>
-                    <label for='09.jpg'><img src='/img/09.jpg' alt=''></label>
-                    <input required type='radio' name='img' id='10.jpg' value='10.jpg'>
-                    <label for='10.jpg'><img src='/img/10.jpg' alt=''></label>
-                    <input required type='radio' name='img' id='11.jpg' value='11.jpg'>
-                    <label for='11.jpg'><img src='/img/11.jpg' alt=''></label>
-                    <input required type='radio' name='img' id='12.jpg' value='12.jpg'>
-                    <label for='12.jpg'><img src='/img/12.jpg' alt=''></label>
-                    <input required type='radio' name='img' id='13.jpg' value='13.jpg'>
-                    <label for='13.jpg'><img src='/img/13.jpg' alt=''></label>
-                    <input required type='radio' name='img' id='14.jpg' value='14.jpg'>
-                    <label for='14.jpg'><img src='/img/14.jpg' alt=''></label>
-                    <input required type='radio' name='img' id='15.jpg' value='15.jpg'>
-                    <label for='15.jpg'><img src='/img/15.jpg' alt=''></label>
-                    <input required type='radio' name='img' id='16.jpg' value='16.jpg'>
-                    <label for='16.jpg'><img src='/img/16.jpg' alt=''></label>
-                    <input required type='radio' name='img' id='17.jpg' value='17.jpg'>
-                    <label for='17.jpg'><img src='/img/17.jpg' alt=''></label>
-                    <input required type='radio' name='img' id='18.jpg' value='18.jpg'>
-                    <label for='18.jpg'><img src='/img/18.jpg' alt=''></label>
-                    <input required type='radio' name='img' id='19.jpg' value='19.jpg'>
-                    <label for='19.jpg'><img src='/img/19.jpg' alt=''></label>
-                    <input required type='radio' name='img' id='20.jpg' value='20.jpg'>
-                    <label for='20.jpg'><img src='/img/20.jpg' alt=''></label>
-                    <input required type='radio' name='img' id='21.jpg' value='21.jpg'>
-                    <label for='21.jpg'><img src='/img/21.jpg' alt=''></label>
-                    <input required type='radio' name='img' id='22.jpg' value='22.jpg'>
-                    <label for='22.jpg'><img src='/img/22.jpg' alt=''></label>
-                    <input required type='radio' name='img' id='23.jpg' value='23.jpg'>
-                    <label for='23.jpg'><img src='/img/23.jpg' alt=''></label>
-                    <input required type='radio' name='img' id='24.jpg' value='24.jpg'>
-                    <label for='24.jpg'><img src='/img/24.jpg' alt=''></label>
-                    <input required type='radio' name='img' id='25.jpg' value='25.jpg'>
-                    <label for='25.jpg'><img src='/img/25.jpg' alt=''></label>
-                    <input required type='radio' name='img' id='26.jpg' value='26.jpg'>
-                    <label for='26.jpg'><img src='/img/26.jpg' alt=''></label>
-                    <input required type='radio' name='img' id='27.jpg' value='27.jpg'>
-                    <label for='27.jpg'><img src='/img/27.jpg' alt=''></label>
-                    <input required type='radio' name='img' id='28.jpg' value='28.jpg'>
-                    <label for='28.jpg'><img src='/img/28.jpg' alt=''></label>
-                    <input required type='radio' name='img' id='29.jpg' value='29.jpg'>
-                    <label for='29.jpg'><img src='/img/29.jpg' alt=''></label>
-                    <input required type='radio' name='img' id='30.jpg' value='30.jpg'>
-                    <label for='30.jpg'><img src='/img/30.jpg' alt=''></label>
-                    <input required type='radio' name='img' id='31.jpg' value='31.jpg'>
-                    <label for='31.jpg'><img src='/img/31.jpg' alt=''></label>
-                    <input required type='radio' name='img' id='32.jpg' value='32.jpg'>
-                    <label for='32.jpg'><img src='/img/32.jpg' alt=''></label>
-                    <input required type='radio' name='img' id='33.jpg' value='33.jpg'>
-                    <label for='33.jpg'><img src='/img/33.jpg' alt=''></label>
-                    <input required type='radio' name='img' id='34.jpg' value='34.jpg'>
-                    <label for='34.jpg'><img src='/img/34.jpg' alt=''></label>
-                    <input required type='radio' name='img' id='35.jpg' value='35.jpg'>
-                    <label for='35.jpg'><img src='/img/35.jpg' alt=''></label>
-                    <input required type='radio' name='img' id='36.jpg' value='36.jpg'>
-                    <label for='36.jpg'><img src='/img/36.jpg' alt=''></label>
-                    <input required type='radio' name='img' id='37.jpg' value='37.jpg'>
-                    <label for='37.jpg'><img src='/img/37.jpg' alt=''></label>
-                    <input required type='radio' name='img' id='38.jpg' value='38.jpg'>
-                    <label for='38.jpg'><img src='/img/38.jpg' alt=''></label>
-                    <input required type='radio' name='img' id='39.jpg' value='39.jpg'>
-                    <label for='39.jpg'><img src='/img/39.jpg' alt=''></label>
-                    <input required type='radio' name='img' id='40.jpg' value='40.jpg'>
-                    <label for='40.jpg'><img src='/img/40.jpg' alt=''></label>
-                    <input required type='radio' name='img' id='41.jpg' value='41.jpg'>
-                    <label for='41.jpg'><img src='/img/41.jpg' alt=''></label>
-                    <input required type='radio' name='img' id='42.jpg' value='42.jpg'>
-                    <label for='42.jpg'><img src='/img/42.jpg' alt=''></label>
-                    <input required type='radio' name='img' id='43.jpg' value='43.jpg'>
-                    <label for='43.jpg'><img src='/img/43.jpg' alt=''></label>
-                    <input required type='radio' name='img' id='44.jpg' value='44.jpg'>
-                    <label for='44.jpg'><img src='/img/44.jpg' alt=''></label>
-                    <input required type='radio' name='img' id='45.jpg' value='45.jpg'>
-                    <label for='45.jpg'><img src='/img/45.jpg' alt=''></label>
+    <div class='main'>
+        <!-- ROW 1 -->
+        <div class='row align-center'>
+            <div class="marvel-device s5 white no-shrink">
+                <div class="top-bar"></div>
+                <div class="sleep"></div>
+                <div class="camera"></div>
+                <div class="sensor"></div>
+                <div class="speaker"></div>
+                <div class="screen">
+                    <section>
+                        <label for="">Title</label>
+                        <input type="text" value='Amazing!!!' disabled>
+                    </section>
+                    <section>
+                        <label for="">Description</label>
+                        <input type="text" value='You have to see this!!!' disabled>
+                    </section>
+                    <section>
+                        <label for="">Image</label>
+                    </section>
+                    <div id="imgs">
+                        <input required type='radio' name='img' id='01.jpg' value='01.jpg'>
+                        <label for='01.jpg'><img src='/img/01.jpg' alt=''></label>
+                        <input required type='radio' checked name='img' id='02.jpg' value='02.jpg'>
+                        <label for='02.jpg'><img src='/img/31.jpg' alt=''></label>
+                        <input required type='radio' name='img' id='03.jpg' value='03.jpg'>
+                        <label for='03.jpg'><img src='/img/03.jpg' alt=''></label>
+                        <input required type='radio' name='img' id='04.jpg' value='04.jpg'>
+                    </div>
+                    <section>
+                        <label for="msg">Message</label>
+                        <input type="text" value='Coffee?' disabled>
+                    </section>
                 </div>
-            </section>
+                <div class="home"></div>
+            </div>
+            <div class='jumbo'>Write a Funky Message</div>
+        </div>
+        <!-- ROW 2 -->
+        <div class='row align-center'>
+            <div class='jumbo'>Send it to your friends</div>
+            <div class="marvel-device s5 white no-shrink">
+                <div class="top-bar"></div>
+                <div class="sleep"></div>
+                <div class="camera"></div>
+                <div class="sensor"></div>
+                <div class="speaker"></div>
+                <div class="screen">
+                    <div class='wa'>
+                        <div class='wa-msg'>
+                            <div class='wa-preview'>
+                                <div class='wa-img'><img src='/img/31.jpg' alt=''></div>
+                                <div class='wa-text'>
+                                    <div class='wa-title'>Amazing!!!</div>
+                                    <div class='wa-desc'>You must see this</div>
+                                    <div class='wa-short-link'>avp.io</div>
+                                </div>
+                            </div>
+                            <div class='wa-content'>
+                                <a class='wa-link' target="_blank" href="https://avp.io/ywOaI">https://avp.io/ywOaI</a>
+                                <div class='wa-seen'>
+                                    <span>11:41</span>
+                                    <span>
+                                        <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 16 15" width="16"
+                                            height="15">
+                                            <path fill="#4FC3F7" d="M15.01 3.316l-.478-.372a.365.365 0 0 0-.51.063L8.666 9.879a.32.32 0 0 1-.484.033l-.358-.325a.319.319 0 0 0-.484.032l-.378.483a.418.418 0 0 0 .036.541l1.32 1.266c.143.14.361.125.484-.033l6.272-8.048a.366.366 0 0 0-.064-.512zm-4.1 0l-.478-.372a.365.365 0 0 0-.51.063L4.566 9.879a.32.32 0 0 1-.484.033L1.891 7.769a.366.366 0 0 0-.515.006l-.423.433a.364.364 0 0 0 .006.514l3.258 3.185c.143.14.361.125.484-.033l6.272-8.048a.365.365 0 0 0-.063-.51z"></path>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='wa-tail'></div>
+                    </div>
+                </div>
+                <div class="home"></div>
+            </div>
+        </div>
+        <!-- ROW 3 -->
+        <div class='row align-center'>
+            <div class="marvel-device s5 white no-shrink">
+                <div class="top-bar"></div>
+                <div class="sleep"></div>
+                <div class="camera"></div>
+                <div class="sensor"></div>
+                <div class="speaker"></div>
+                <div class="screen">
+                    <div class='message' dir='auto' style='font-size: 2em'>
+                        <div>Coffee?</div>
+                    </div>
+                    <a id='reply' title='Replay' href="/app/"><i class='icon-reply'></i></a>
+                </div>
+                <div class="home"></div>
+            </div>
+            <div class='jumbo'>They click the link :)</div>
+        </div>
 
-            <!-- MESSAGE -->
-            <section>
-
-                <label for="msg">Message</label>
-                <input required id='msg' type="text" placeholder="e.g. Coffee Break?">
-            </section>
-
-
-            <!-- GET LINK  -->
-            <section>
-                <button type='submit' id='get-link'>
-                    <i class='icon-link'></i>
-                    Generate Link
-                </button>
-                <input id='short-url' type='text' readonly onClick='this.select()' />
-            </section>
-        </form>
-
-        <!-- SHARE -->
-        <a id='share' class='btn' href=''>
-            <i class='icon-whatsapp'></i> Share
-        </a>
     </div>
 </body>
 
