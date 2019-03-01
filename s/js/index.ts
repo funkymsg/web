@@ -13,7 +13,13 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('is mobile', mobile)
 
     function getLongUrl(info: info) {
-        return `${location.href}${encodeURIComponent(info.img)}/${encodeURIComponent(info.title)}/${encodeURIComponent(info.description)}/${encodeURIComponent(info.msg)}/`
+        const img = encodeURIComponent(info.img)
+        const title = encodeURIComponent(info.title)
+        const desc = encodeURIComponent(info.description)
+        const msg = encodeURIComponent(info.msg)
+        const url = `${location.protocol}//${location.host}/${img}/${title}/${desc}/${msg}/`
+        console.log(url)
+        return url
     }
 
     async function getShortUrl(info: info): Promise<string> {
@@ -41,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const out = document.getElementById('short-url') as HTMLInputElement
         out.value = 'generating link...'
         out.value = await getShortUrl(info)
-        if(mobile){
+        if (mobile) {
             share.href = `whatsapp://send?text=${out.value}`
         }
         return false;
