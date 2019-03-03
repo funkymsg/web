@@ -41,10 +41,10 @@ input[type='text'] {
     width: 100%;
     padding: .5em 0;
     font-size: .8em;
-    border: 3px solid white;
+    border: 0;
     color: #555;
     outline: none;
-    border-bottom-color: #5FAD56;
+    border-bottom: 1px solid #ccc;
     &:focus {
         border-bottom-color: orange;
     }
