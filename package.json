@@ -1,5 +1,5 @@
 {
-    "name": "buzzzzzzzz.com",
+    "name": "funkymsg.com",
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
@@ -49,6 +49,6 @@
         "docker:rm": "docker rm $(docker ps -a -q)",
         "docker:rmi": "docker rmi $(docker images gkutiel/funkymsg.com)",
         "docker:push": "docker push gkutiel/funkymsg.com",
-        "start": "npm-run-all -p watch server"
+        "start": "npm-run-all build -p watch server"
     }
 }
