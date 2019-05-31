@@ -23,8 +23,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     async function getShortUrl(info: info): Promise<string> {
-        const res = await fetch(`https://avp.io/api/v2/action/shorten?key=ae34615cd0157f29c42263d132e7ef&url=${encodeURIComponent(getLongUrl(info))}`)
-        return await res.text()
+        // const res = await fetch(`https://avp.io/api/v2/action/shorten?key=ae34615cd0157f29c42263d132e7ef&url=${encodeURIComponent(getLongUrl(info))}`)
+        const res = await fetch(`https://is.gd/create.php?format=json&url=${encodeURIComponent(getLongUrl(info))}`)
+        const json = await res.json() as { shorturl: string }
+        return json.shorturl
     }
 
 
